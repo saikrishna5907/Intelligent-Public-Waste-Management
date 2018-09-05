@@ -1,0 +1,10 @@
+.container{
+margin-top: 1rem;
+width: 50%;
+margin: 1rem auto;
+}
+mat-form-field,
+textarea
+{
+  width:100%;
+}

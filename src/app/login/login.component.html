@@ -1,0 +1,20 @@
+<app-header></app-header>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="container" >
+  <mat-card>
+<form (submit)="OnClickLogIn($event)">
+    <h3>Sign in with your organizational account</h3>
+    <mat-form-field>
+        <textarea matInput row="7" name="userName" #userName="ngModel" ngModel required placeholder="UserName"></textarea>
+        <mat-error *ngIf="userName.value == ''">Please Enter User Name</mat-error>
+      </mat-form-field>
+      <br/><br/>
+      <mat-form-field>
+        <input matInput row="7" type="password" name="password" #password="ngModel" ngModel required placeholder="Password">
+        <mat-error *ngIf="password.value == ''">Please Enter Password</mat-error>
+      </mat-form-field>
+      <br/><br/>
+    <button Style="background-color:rgb(38, 189, 113);border-radius:15px" mat-raised-button type="submit">Log In</button>
+  </form>
+</mat-card>
+</div>

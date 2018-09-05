@@ -1,0 +1,10 @@
+#home,#forCities,#forBusiness,#binStatus,#about,#contact{
+  margin-right:20px;
+  background-color:rgb(80, 158, 80);
+  color: mistyrose;
+  font-size: 20px;
+  font-style: italic;
+}
+mat-card{
+  background-color: rgb(56, 92, 81);
+}
