@@ -35,7 +35,6 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderForhomeComponent } from './header-forhome/header-forhome.component';
 import { HeaderForMainPageComponent } from './header-for-main-page/header-for-main-page.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { BinDialogComponent } from './bin-dialog/bin-dialog.component';
 import { DeleteManagerComponent } from './delete-manager/delete-manager.component';
 const customNotifierOptions: NotifierOptions = {
   position: {
@@ -94,7 +93,6 @@ gap: 10
     ContactComponent,
     HeaderForhomeComponent,
     HeaderForMainPageComponent,
-    BinDialogComponent,
     DeleteManagerComponent,
   ],
   imports: [
@@ -124,9 +122,6 @@ gap: 10
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-  ],
-  entryComponents: [
-    BinDialogComponent
   ],
   providers: [LoginAuthenticationService, SignUpService, AuthGuard, NgbActiveModal],
   bootstrap: [AppComponent]
