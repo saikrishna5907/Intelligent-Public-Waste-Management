@@ -1,0 +1,25 @@
+#home,#forCities,#about,#contact{
+  margin-left:5.5%;
+  background-color:transparent;
+  border:transparent;
+  color:rgb(53, 24, 24);
+  font-size: 100%;
+  border:none;
+  padding: 0.5% 2%;
+  display: inline-block;
+}
+#home:hover {background-color:rgb(124, 177, 124)}
+#forCities:hover {background-color: rgb(124, 177, 124)}
+#about:hover {background-color: rgb(124, 177, 124)}
+#contact:hover {background-color: rgb(124, 177, 124)}
+#menuItems{
+  width:65%;
+  float: right;
+}
+mat-card{
+  background: transparent;
+  height: auto;
+}
+.btn-toolbar{
+width : 75%
+}

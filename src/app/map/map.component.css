@@ -1,0 +1,11 @@
+#mapid{
+height:700px;
+width: 100%;
+}
+.mycluster{
+  width: 1px;
+			height: 1px;
+			background-color: greenyellow;
+			text-align: center;
+			font-size: 24px;
+}

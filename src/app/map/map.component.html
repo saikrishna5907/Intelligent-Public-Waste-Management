@@ -1,0 +1,96 @@
+
+<div class="row">
+  <div class="col-md-offset-2  col-md-5 left">
+    <div id="managerAdminCommon">
+        <H1>Cluster Of Bins</H1>
+        <br/><br/>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 ">
+              <mat-select placeholder="Filter By Area" (selectionChange)="filterByLocation(filterByArea.value)" ngModel #filterByArea  ngModel="selectedArea"
+                name="filterByArea">
+                <mat-option *ngFor="let location of location_list" [value]="location" style="background-color:rgba(157, 185, 157, 0.774)">{{location}}</mat-option>
+              </mat-select>
+            </div>
+            <div class="col-md-2 ">
+              <mat-select Style="width:70%" placeholder="Filter By Bin level" name="filterByBinLevel" (selectionChange)='filterByBinPercentage(filterByBinLevel.value)' #filterByBinLevel
+                ngModel="filterByBinLevel" name="filterByBinLevel">
+                <mat-option value="low" style="background-color: rgba(89, 197, 89, 0.774)">Low</mat-option>
+                <mat-option value="medium" style="background-color: rgba(201, 85, 57, 0.856)">Medium</mat-option>
+                <mat-option value="high" style="background-color: rgba(201, 56, 56, 0.877)">High</mat-option>
+              </mat-select>
+            </div>
+            <div class="col-md-2 ">
+
+                <form>
+                  <mat-form-field>
+                    <input  matInput row="1" name="threshold" #threshold  [(ngModel)]="thresholdValue" value="{{thresholdValue}}" placeholder="Threshold Value">
+                  </mat-form-field>
+                </form>
+            </div>
+            <div class="col-md-2 ">
+            <label>Set Bin Threshold Value</label>
+            <mat-slider thumbLabel value="{{thresholdValue}}" [displayWith]="formatLabel" [(ngModel)]="thresholdValue" name="thresholdVal" #thresholdVal tickInterval="2" min="50" max="100"></mat-slider>
+            </div>
+            <div class="col-md-2 ">
+            <button id="notifications" mat-raised-button (click)="setThresholdValue(thresholdVal.value)" class="basic-btn">Set Threshold</button>
+          </div>
+          </div>
+        </div>
+        <br/><br/>
+      </div>
+    </div>
+
+</div>
+
+<!-- <mat-card>
+    <mat-card-header>
+      <H1>Bin Details</H1>
+    </mat-card-header>
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card> -->
+
+
+
+  <!-- <mat-card id="myModal">
+    <div class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Bin Details</h4>
+          </div>
+
+          <div class="modal-body">
+            <table class="table table-sm">
+              <thead>
+            <th>Bin ID</th>
+            <th>BinLevel</th>
+            <th>SensorID</th>
+            <th>SensorLocation</th>
+            <th>Filled Percentage</th>
+          </thead>
+          <tbody>
+            <tr>
+            <td>{{binID}}</td>
+            <td>{{binLevel}}</td>
+            <td>{{sensorID}}</td>
+            <td>{{sensorLocation}}</td>
+            <td>{{filledPercentage}}</td>
+          </tr>
+          </tbody>
+
+          </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</mat-card> -->
+<div id="mapid">
+</div>
+<notifier-container></notifier-container>

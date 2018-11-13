@@ -1,4 +1,13 @@
+
 <app-header></app-header>
-<p>
-  admin-page works!
-</p>
+<br/><br/>
+<div class="form-container" id="toolbar">
+  <button id="logout" mat-raised-button (click)="logout()" class="basic-btn btn-sm">Log Out</button>
+  <button id="addManager" mat-raised-button routerLink='signUp' class="basic-btn">Add Manager</button>
+  <button id="delManager" mat-raised-button routerLink='/deleteManager' class="basic-btn">Delete Manager</button>
+</div>
+<div id="map">
+  <app-map></app-map>
+</div>
+<br/><br/>
+<app-footer></app-footer>

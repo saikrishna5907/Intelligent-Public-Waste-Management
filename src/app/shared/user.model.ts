@@ -1,8 +1,21 @@
+export interface Roles {
+    guest: boolean;
+    manager?: boolean;
+    admin?: boolean;
+}
 export class User {
-  UserName: string;
-  Password: string;
-  Email: string;
-  FirstName: string;
-  LastName: string;
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  constructor(email: string,
+    password: string,
+    firstName: string,
+    lastName: string) {
+  this.email = email;
+  this.password = password;
+  this.firstName = firstName;
+  this.lastName = lastName;
+  }
 }
 

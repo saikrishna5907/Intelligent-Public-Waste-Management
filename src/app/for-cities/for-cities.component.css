@@ -1,0 +1,14 @@
+#signUpBtn,#loginBtn{
+  margin-right: 20px;
+  border-radius: 40px;
+  background-color: tomato;
+  color: mistyrose;
+  font-size: 20px;
+}
+.bg-img{
+  background: url('https://firebasestorage.googleapis.com/v0/b/pwms-db.appspot.com/o/melbourne-city-view-buildings-eureka-skydeck.jpg?alt=media&token=25c5efdd-1370-41d8-a058-f8bf8af5c68d');
+  background-size:cover;
+  width: 100%;
+  height: 570px;
+  background-size: 100% 100%;
+}

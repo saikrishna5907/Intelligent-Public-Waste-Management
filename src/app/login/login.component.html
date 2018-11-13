@@ -1,20 +1,40 @@
-<app-header></app-header>
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<div class="container" >
-  <mat-card>
-<form (submit)="OnClickLogIn($event)">
-    <h3>Sign in with your organizational account</h3>
-    <mat-form-field>
-        <textarea matInput row="7" name="userName" #userName="ngModel" ngModel required placeholder="UserName"></textarea>
-        <mat-error *ngIf="userName.value == ''">Please Enter User Name</mat-error>
-      </mat-form-field>
-      <br/><br/>
-      <mat-form-field>
-        <input matInput row="7" type="password" name="password" #password="ngModel" ngModel required placeholder="Password">
-        <mat-error *ngIf="password.value == ''">Please Enter Password</mat-error>
-      </mat-form-field>
-      <br/><br/>
-    <button Style="background-color:rgb(38, 189, 113);border-radius:15px" mat-raised-button type="submit">Log In</button>
-  </form>
-</mat-card>
+<div id="header">
+  <app-header></app-header>
 </div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="row">
+  <div class="col-lg-5 left">
+   <img style="float: right;" src="https://firebasestorage.googleapis.com/v0/b/pwms-db.appspot.com/o/favicon.ico.png?alt=media&token=2eb4d982-3629-4754-b230-46e445b513bc">
+  </div>
+  <div class="col-lg-5 right">
+    <div class="container" style="width:100%" >
+      <mat-card>
+          <form (submit)="login(email.value, password.value, designation.value)" #loginForm="ngForm">
+              <mat-form-field>
+                  <textarea class="validate" matInput row="7" name="email" #email  ngModel required placeholder="Email ID" [pattern]="emailPattern"></textarea>
+                  <mat-error *ngIf="email.value == ''">Please Enter Email ID</mat-error>
+                  <mat-error *ngIf="email.value.pattern == emailPattern"  >Invalid Email ID</mat-error>
+              </mat-form-field>
+                <br/><br/>
+                <mat-form-field>
+                  <input matInput row="7" type="password" name="password" #password ngModel required placeholder="Password">
+                  <mat-error *ngIf="password.value == ''">Please Enter Password</mat-error>
+                </mat-form-field>
+                <br/><br/>
+                <mat-form-field>
+                  <mat-select placeholder="Designation" #designation ngModel required name="designation">
+                      <mat-option *ngFor="let designation of designations" [value]="designation.value">
+                        {{designation.viewValue}}
+                      </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="designation.value == ''"><option>Please Select Designation</option></mat-error>
+                </mat-form-field>
+
+                <br/><br/>
+                <button [disabled]="loginForm.form.invalid"Style="background-color:rgb(38, 189, 113);border-radius:15px" mat-raised-button type="submit">Log In</button>
+              </form>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

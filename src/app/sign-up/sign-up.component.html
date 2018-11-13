@@ -2,35 +2,50 @@
 <br/><br/><br/>
 <div class="container">
   <mat-card>
-    <form (submit)="OnClickSignUp($event)" #signUpForm="ngForm">
-      <h3 Style="text-align: center">Enter Your Details</h3>
-      <mat-form-field>
+    <form (submit)="addManager(email.value, password.value, firstName.value, lastName.value)" #signUpForm="ngForm">
+      <!-- <input type="hidden" $key"> -->
+      <h3 Style="text-align: center">Enter Details</h3>
+      <!-- <mat-form-field>
         <textarea matInput row="7" name="userName" #userName ngModel   required placeholder="UserName"></textarea>
         <mat-error *ngIf="userName.value == ''">Please Enter User Name</mat-error>
       </mat-form-field>
-      <br/><br/>
+      <br/><br/> -->
       <mat-form-field>
-        <input matInput row="7" type="password" name="password" #password="ngModel"  ngModel  required placeholder="Password" minlength="3">
-        <mat-error *ngIf="password.value == ''">Please Enter Password</mat-error>
-      </mat-form-field>
-      <br/><br/>
-      <mat-form-field>
-        <textarea class="validate" matInput row="7" name="email" #email ngModel required placeholder="Email ID" [pattern]="emailPattern"></textarea>
+        <textarea class="validate" matInput row="7"  name="email" #email ngModel required placeholder="Email ID" [pattern]="emailPattern"></textarea>
         <mat-error *ngIf="email.value == ''">Please Enter Email ID</mat-error>
         <mat-error *ngIf="email.value.pattern == emailPattern"  >Invalid Email ID</mat-error>
       </mat-form-field>
       <br/><br/>
       <mat-form-field>
-        <textarea matInput row="7" name="firstName" #firstName ngModel required placeholder="First Name"></textarea>
+        <input matInput row="7" type="password"  name="password" #password  ngModel  required placeholder="Password" minlength="3">
+        <mat-error *ngIf="password.value == ''">Please Enter Password</mat-error>
+      </mat-form-field>
+      <br/><br/>
+      <mat-form-field>
+        <textarea matInput row="7" name="firstName"  #firstName ngModel required placeholder="First Name"></textarea>
         <mat-error *ngIf="firstName.value == ''">Please Enter First Name</mat-error>
       </mat-form-field>
       <br/><br/>
       <mat-form-field>
-        <textarea matInput row="7" name="lastName" #lastName ngModel required placeholder="Last Name"></textarea>
+        <textarea matInput row="7" name="lastName"  #lastName ngModel required placeholder="Last Name"></textarea>
         <mat-error *ngIf="lastName.value == ''">Please Enter Last Name</mat-error>
       </mat-form-field>
+      <!-- <mat-form-field style="width: 30%">
+        <mat-select placeholder="Designation" #designation ngModel required name="designation">
+          <mat-option *ngFor="let designation of designations" [value]="designation.value">
+            {{designation.viewValue}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="designation.value == ''"><option>Please Select Designation</option></mat-error>
+      </mat-form-field> -->
       <br/><br/>
-      <button [disabled]="!signUpForm.valid" Style="background-color:rgb(38, 189, 113);border-radius: 15px;" mat-raised-button type="submit">SUBMIT</button>
+        <button  [disabled]="!signUpForm.valid" style="background-color:rgb(38, 189, 113);border-radius: 15px;" mat-raised-button type="submit">SUBMIT</button>
+        <div class="divider"></div>
+          <button Style="background-color:rgb(202, 111, 111);border-radius: 15px;" (click)="resetForm()" mat-raised-button>Clear</button>
     </form>
+    <div class ="alert alert-danger" *ngIf="showAddManager">
+        Manager Succefully Added!
+      </div>
   </mat-card>
 </div>
+<app-footer></app-footer>

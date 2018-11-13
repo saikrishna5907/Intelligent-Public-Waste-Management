@@ -31,11 +31,25 @@ packages to install
 
 1) Angular Material 
 npm install --save @angular/material @angular/cdk @angular/animations
+npm install --save-dev @angular-devkit/build-angular
 
 2) Install Leaflet
 npm i g leaflet
 
 3)Bootstrap
 npm i g bootstrap
+npm install --save @ng-bootstrap/ng-bootstrap
+
 4)BrowserAnimationModule
 npm install @angular/animations --save
+
+5) Install firebase
+npm install angular-firebase --save
+
+Install angularfire2
+npm i g angularfire2
+npm install firebase-admin --save
+<!-- for leaflet cluster -->
+npm install leaflet.markercluster
+npm install -g jake
+npm install --save express

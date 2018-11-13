@@ -1,0 +1,26 @@
+#managers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 500px;
+    font-size: 200%;
+}
+button{
+  color: black
+}
+#managers td, #managers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#managers tr:nth-child(even){background-color: #f2f2f2;}
+
+#managers tr:hover {background-color: #ddd;}
+
+#managers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgba(63, 145, 63, 0.705);
+    color: white;
+}

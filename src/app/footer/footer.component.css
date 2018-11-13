@@ -1,0 +1,8 @@
+mat-card{
+  background-color: rgba(15, 14, 14, 0.747);
+}
+.divider{
+  width:5%;
+  height:auto;
+  display:inline-block;
+}

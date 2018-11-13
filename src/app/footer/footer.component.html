@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-3">
+        <button mat-raised-button color="primary" style="color: mistyrose;font-size: 20px;">
+          TRASH TALK'S
+        </button>
+      </div>
+      <div  class="col-md-3 right">
+        <a style="color: White"routerLink="mainPage">Home</a>
+        <br/><br/>
+        <a style="color: White" routerLink="forCities">For Cities</a>
+        <br/><br/>
+        <a style="color: White"routerLink="aboutPage">About</a>
+        <br/><br/>
+        <a style="color: White"routerLink="mainPage">Contact</a>
+        <br/><br/>
+      </div>
+      <div style="color: White" class="col-md-3 right">
+        <h3>Get our newsletter</h3>
+        <form (submit)="subscribe(email.value)" #subscribeForm="ngForm">
+          <mat-form-field>
+              <textarea style="color: White" class="validate" matInput row="1" name="email" #email  ngModel required placeholder="Email ID" [pattern]="emailPattern"></textarea>
+              <mat-error *ngIf="email.value == ''">Please Enter Email ID</mat-error>
+              <mat-error *ngIf="email.value.pattern == emailPattern"  >Invalid Email ID</mat-error>
+          </mat-form-field>
+          <div class="divider"></div>
+          <button [disabled]="subscribeForm.form.invalid"Style="background-color:White;color: black;border-radius:15px" mat-raised-button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-3 right">
+        <a  style="color: White" href="https://www.facebook.com/TrashTalks-878370995691403/?modal=admin_todo_tour">Facebook</a>
+        <br/><br/>
+        <a style="color: White">Twitter</a>
+        <br/><br/>
+        <a style="color: White">Instagram</a>
+        <br/><br/>
+        <a style="color: White">Snapchat</a>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>

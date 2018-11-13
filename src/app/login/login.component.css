@@ -1,10 +1,17 @@
 .container{
 margin-top: 1rem;
-width: 50%;
 margin: 1rem auto;
 }
 mat-form-field,
 textarea
 {
   width:100%;
+}
+.divider{
+  width:40px;
+  height:auto;
+  display:inline-block;
+}
+#header{
+
 }

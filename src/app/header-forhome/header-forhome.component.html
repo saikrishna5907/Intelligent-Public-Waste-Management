@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    <button  mat-raised-button color="primary" style="color: mistyrose;font-size: 20px;" [matMenuTriggerFor]="menu">
+      TRASH TALK'S
+    </button>
+    <div id="menuItems" class="btn-toolbar btn btn-group">
+      <button type="button" id="home" mat-button  routerLink="" [matMenuTriggerFor]="menu">
+        HOME
+      </button>
+      <button id="forCities" routerLink="/forCities" mat-button [matMenuTriggerFor]="menu">
+        FOR CITIES
+      </button>
+      <button id="about" routerLink="/about" mat-button [matMenuTriggerFor]="menu">
+        ABOUT
+      </button>
+      <button id="contact" routerLink="/contact" mat-button [matMenuTriggerFor]="menu">
+        CONTACT
+      </button>
+    </div>
+
+    <mat-menu #menu="matMenu">
+    </mat-menu>
+  </mat-card-content>
+</mat-card>

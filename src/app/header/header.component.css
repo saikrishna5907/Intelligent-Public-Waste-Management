@@ -1,10 +1,21 @@
-#home,#forCities,#forBusiness,#binStatus,#about,#contact{
-  margin-right:20px;
-  background-color:rgb(80, 158, 80);
-  color: mistyrose;
-  font-size: 20px;
-  font-style: italic;
+#home,#forCities,#about,#contact{
+  margin-left:5.5%;
+  background-color:transparent;
+  border:transparent;
+  color:lightgoldenrodyellow;
+  font-size: 100%;
 }
+#home:hover {background-color:rgb(39, 182, 192)}
+#forCities:hover {background-color: rgb(39, 182, 192)}
+#about:hover {background-color: rgb(39, 182, 192)}
+#contact:hover {background-color: rgb(39, 182, 192)}
+#home:active{background-color:rgb(39, 182, 192)}
 mat-card{
-  background-color: rgb(56, 92, 81);
+  background-color:rgb(80, 153, 158) ;
+  height: auto;
 }
+.btn-toolbar{
+width : 75%
+}
+
+

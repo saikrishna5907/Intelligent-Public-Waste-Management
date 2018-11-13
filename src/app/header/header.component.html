@@ -1,30 +1,24 @@
 <mat-card>
   <mat-card-content>
-    <button mat-raised-button color="primary" style="color: mistyrose;font-size: 20px;" [matMenuTriggerFor]="menu">
+
+    <button  mat-raised-button color="primary" style="color: mistyrose;font-size: 20px;" [matMenuTriggerFor]="menu">
       TRASH TALK'S
     </button>
-    <div class="btn-toolbar" style="float:right">
-      <button type="button" id="home" mat-raised-button  [matMenuTriggerFor]="menu">
+    <div class="btn-toolbar btn btn-group" style="float: right">
+      <button type="button" id="home" mat-button  routerLink="" [matMenuTriggerFor]="menu">
         HOME
       </button>
-      <button id="forCities" mat-raised-button [matMenuTriggerFor]="menu">
-        FORCITIES
+      <button id="forCities" routerLink="/forCities" mat-button [matMenuTriggerFor]="menu">
+        FOR CITIES
       </button>
-      <button id="forBusiness"  mat-raised-button [matMenuTriggerFor]="menu">
-        FORBUSINESS
-      </button>
-      <button id="binStatus" mat-raised-button [matMenuTriggerFor]="menu">
-        BIN STATUS
-      </button>
-      <button id="about" mat-raised-button [matMenuTriggerFor]="menu">
+      <button id="about" routerLink="/about" mat-button [matMenuTriggerFor]="menu">
         ABOUT
       </button>
-      <button id="contact" mat-raised-button [matMenuTriggerFor]="menu">
+      <button id="contact" routerLink="/contact" mat-button [matMenuTriggerFor]="menu">
         CONTACT
       </button>
     </div>
     <mat-menu #menu="matMenu">
-
     </mat-menu>
   </mat-card-content>
 </mat-card>
