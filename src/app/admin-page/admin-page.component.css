@@ -6,8 +6,8 @@
 #logout,#addManager,#delManager{
   margin-right: 20px;
   border-radius: 40px;
-  background-color:rgb(48, 48, 136);
-  color: mistyrose;
+  background-color:rgba(4, 54, 58, 0.733);
+  color: rgb(85, 211, 127);
   font-size: 20px;
   float:right;
 }

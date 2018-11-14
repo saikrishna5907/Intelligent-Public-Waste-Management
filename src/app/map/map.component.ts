@@ -12,7 +12,7 @@ declare let L;
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit, AfterViewInit {
   private readonly notifier: NotifierService;
   sensorDataList: List<Sensor> = [];
   binsDataList: List<Bin> = [];
@@ -47,6 +47,7 @@ export class MapComponent implements OnInit {
   }
   }
   filterByLocation(area: string) {
+    return area;
   }
   ngOnInit() {
 
@@ -268,5 +269,10 @@ export class MapComponent implements OnInit {
     //  clusterMarkers.on('click', onBinClick);
     // clusterMarkers.on('mouseover', onBinHover);
     clusterMarkers.refreshClusters();
+  }
+
+
+  ngAfterViewInit() {
+    console.log(this.filterByLocation);
   }
 }

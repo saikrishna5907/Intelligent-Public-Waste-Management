@@ -11,7 +11,6 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { MangerPageComponent } from './manger-page/manger-page.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { BinDialogComponent } from './bin-dialog/bin-dialog.component';
 import { DeleteManagerComponent } from './delete-manager/delete-manager.component';
 export const router: Routes = [
 {
@@ -38,14 +37,6 @@ export const router: Routes = [
     path: 'adminPage',
     component: AdminPageComponent,
     canActivate: [AuthGuard]
-  //   children: [
-  //     {
-  //     path: 'signUp',
-  //     component: SignUpComponent
-  //     }
-  // ]
-    // canActivate: [AuthGuard]
-
   },
   {
     path: 'deleteManager',

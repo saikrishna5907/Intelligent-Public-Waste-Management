@@ -7,7 +7,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-2 ">
-              <mat-select placeholder="Filter By Area" (selectionChange)="filterByLocation(filterByArea.value)" ngModel #filterByArea  ngModel="selectedArea"
+              <mat-select placeholder="Filter By Area" (selectionChange)="filterByLocation(filterByArea.value)" ngModel #filterByArea  ngModel="filterByArea"
                 name="filterByArea">
                 <mat-option *ngFor="let location of location_list" [value]="location" style="background-color:rgba(157, 185, 157, 0.774)">{{location}}</mat-option>
               </mat-select>
@@ -33,7 +33,7 @@
             <mat-slider thumbLabel value="{{thresholdValue}}" [displayWith]="formatLabel" [(ngModel)]="thresholdValue" name="thresholdVal" #thresholdVal tickInterval="2" min="50" max="100"></mat-slider>
             </div>
             <div class="col-md-2 ">
-            <button id="notifications" mat-raised-button (click)="setThresholdValue(thresholdVal.value)" class="basic-btn">Set Threshold</button>
+            <button id="thresholdBT" mat-raised-button (click)="setThresholdValue(thresholdVal.value)" class="basic-btn">Set Threshold</button>
           </div>
           </div>
         </div>

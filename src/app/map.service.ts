@@ -5,7 +5,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Bin } from './shared/bins.model';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -27,7 +27,11 @@ export class MapService {
     getThresholdValue(): Observable<number> {
       return this.http.get<number>('https://pwms-db.firebaseio.com/data/thresholdValue.json');
     }
+
     setThresholdValue(val: number) {
-      this.http.put('https://pwms-db.firebaseio.com/data/thresholdValue.json', val);
+      const httpOptions = {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      };
+      this.http.put('https://pwms-db.firebaseio.com/data.json', val, httpOptions);
     }
   }
