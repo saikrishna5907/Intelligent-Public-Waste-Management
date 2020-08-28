@@ -10,7 +10,7 @@ export const environment = {
     databaseURL: 'https://pwms-db.firebaseio.com',
     projectId: 'pwms-db',
     storageBucket: 'pwms-db.appspot.com',
-    messagingSenderId: '881840628526'
+    messagingSenderId: ''
   }
 };
 
