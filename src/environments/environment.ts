@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   fireBaseConfig: {
-    apiKey: 'AIzaSyAKm5oeKLLI7UiCWW0ccWv3GXuTSRP-9J8',
+    apiKey: 'API_KEY',
     authDomain: 'pwms-db.firebaseapp.com',
     databaseURL: 'https://pwms-db.firebaseio.com',
     projectId: 'pwms-db',
